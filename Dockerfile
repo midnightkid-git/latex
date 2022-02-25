@@ -62,10 +62,5 @@ RUN /src/TinyTeX/bin/x86_64-linux/tlmgr path add \
         xstring \
         cm-super
 
-RUN ln -s /usr/bin/python3 /usr/bin/python
-FROM python:3
-RUN pip install pdflatex
-WORKDIR /app
-
 EXPOSE 8080
 CMD ["python3", "pdflatex.py"]
