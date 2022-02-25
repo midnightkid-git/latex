@@ -63,5 +63,10 @@ RUN /src/TinyTeX/bin/x86_64-linux/tlmgr path add \
         cm-super
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
+
+CMD ["/bin/sh"]
+/bin/sh -c addgroup --system pdflatex      && adduser --system --ingroup pdflatex pdflatex
+/bin/sh -c apk add --no-cache --repository /packages     texlive     texmf-dist-latexextra     py3-aiohttp
+USER pdflatex
 EXPOSE 8080
 CMD ["python3" "pdflatex.py"]
