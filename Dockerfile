@@ -64,4 +64,5 @@ RUN /src/TinyTeX/bin/x86_64-linux/tlmgr path add \
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN pip install pygments
+EXPOSE 8080
 CMD ["python3" "pdflatex.py"]
