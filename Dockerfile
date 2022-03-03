@@ -63,4 +63,4 @@ RUN /src/TinyTeX/bin/x86_64-linux/tlmgr path add \
         cm-super
 
 EXPOSE 8080
-CMD ["python3", "pdflatex.py"]
+# CMD ["python3", "pdflatex.py"]
